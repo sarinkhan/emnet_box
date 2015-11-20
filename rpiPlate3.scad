@@ -264,15 +264,15 @@ cube([chassisX,screwBlockY,supportBackThickness]);
 translate([0,0,-1*supportBackThickness])
 	openBasePlate2(2,2,supportBackThickness);
 
-translate([0,-supportBackThickness,-supportBackThickness])
-cube([chassisX+beamsThickness,supportBackThickness,supportBackThickness+h0]);
+translate([-1,-supportBackThickness,-supportBackThickness])
+cube([chassisX+beamsThickness+2,supportBackThickness,supportBackThickness+h0]);
 
 
 //BOTTOM FIXATION BLOCKS
-translate([-screwBlockX,-supportBackThickness,-supportBackThickness])
+translate([-screwBlockX-1,-supportBackThickness,-supportBackThickness])
 cube([screwBlockX,screwBlockY+supportBackThickness,h0+supportBackThickness]);
 
-translate([chassisX+beamsThickness,-supportBackThickness,-supportBackThickness])
+translate([chassisX+1+beamsThickness,-supportBackThickness,-supportBackThickness])
 cube([screwBlockX,screwBlockY+supportBackThickness,h0+supportBackThickness]);
 
 
@@ -331,11 +331,11 @@ fixationSupportNoHoles();
 
 
 
-		translate([-screwBlockX/2,0,h0/2])
+		translate([-screwBlockX/2-1,0,h0/2])
 		rotate([90,0,0])
 		cylinder(r=fixationHoles1Radius, h=piBZ+padding,$fn=16,center=true);
 
-		translate([chassisX+beamsThickness+screwBlockX/2,0,h0/2])
+		translate([chassisX+beamsThickness+screwBlockX/2+1,0,h0/2])
 		rotate([90,0,0])
 		cylinder(r=fixationHoles1Radius, h=piBZ+padding,$fn=16,center=true);	
 
