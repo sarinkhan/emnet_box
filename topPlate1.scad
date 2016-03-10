@@ -32,8 +32,8 @@ switchRadius=16/2+0.2;
 
 cornerRadius=10;
 
-caseIntXDistCorners=178-10*2;
-caseIntYDistCorners=249-10*2;
+caseIntXDistCorners=178-10*2-0.5;
+caseIntYDistCorners=249-10*2-0.5;
 
 module topPlateNoHoles()
 {
